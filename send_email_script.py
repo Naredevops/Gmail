@@ -36,3 +36,5 @@ except Exception as e:
     print("Failed to send email:", e)
 finally:
     server.quit()
+
+    
