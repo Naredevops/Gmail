@@ -21,18 +21,16 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
 
-      # Activate the virtual environment
+      # Activate the virtual environment (if applicable)
+      # No virtual environment needed for this case, directly use Python interpreter
       - name: Activate virtual environment
         run: |
-          # source /path/to/your/virtual/environment/bin/activate
-          # C:\Program Files\Python311
-          # source C:\Program Files\Python311
-          C:\Users\User\Music\Cot90\my_venv
-          - name: Print directory contents
-            run: ls -l
+          # Use the Python interpreter directly to install dependencies
+          C:\Program Files\Python311\python.exe -m pip install -r requirements.txt
 
-          
-          
+      # Print directory contents (for debugging)
+      - name: Print directory contents
+        run: ls -l
 
       # Run your script with activated environment
       - name: Send Email
