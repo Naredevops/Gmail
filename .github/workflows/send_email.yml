@@ -10,23 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
 
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
-        pip install <dependency1> <dependency2> <...>
-        pip install --upgrade pip
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install <dependency1> <dependency2> <...>
+          pip install --upgrade pip
 
-        
+      - name: Install dependencies
+        working-directory: my_project
+        run: pip install -r requirements.txt
 
-    - name: Send Email
-      env:
-        SMTP_SERVER: smtp.gmail.com
-        SMTP_PORT: 587
-        GMAIL_USER: ${{ secrets.GMAIL_USER }}
-        GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
-      run: python send_email_script.py
+      - name: Send Email
+        env:
+          SMTP_SERVER: smtp.gmail.com
+          SMTP_PORT: 587
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+        run: python send_email_script.py
