@@ -24,7 +24,7 @@ jobs:
       # Activate the virtual environment
       - name: Activate virtual environment
         run: |
-          C:\Program Files\Python311\python.exe  # Replace 'path/to/venv' with the path to your virtual environment
+          C:\Program Files\Python311\python.exe -m venv c:\Users\User\Music\Cot90\.venv  # Replace 'path/to/venv' with the path to your virtual environment
 
       # Run your script with activated environment
       - name: Send Email
