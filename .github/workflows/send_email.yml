@@ -21,16 +21,13 @@ jobs:
           pip install <dependency1> <dependency2> <...>
           pip install --upgrade pip
 
-      - name: Install dependencies
-        working-directory: https://github.com/Naredevops/Gmail/edit/main/requirements.txt
-        run: pip install -r requirements.txt
-        - name: Install dependencies
-  working-directory: ${{ github.workspace }}
-  run: pip install -r requirements.txt
-  - name: List directory contents
-  run: ls -l
+      - name: Install dependencies from requirements.txt
+        run: |
+          cd ${{ github.workspace }}
+          pip install -r requirements.txt
 
-
+      - name: List directory contents
+        run: ls -l
 
       - name: Send Email
         env:
