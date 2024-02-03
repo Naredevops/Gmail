@@ -26,7 +26,8 @@ jobs:
         run: |
           # source /path/to/your/virtual/environment/bin/activate
           # C:\Program Files\Python311
-          source C:\Program Files\Python311
+          # source C:\Program Files\Python311
+          C:\Users\User\Music\Cot90\my_venv
           - name: Print directory contents
             run: ls -l
 
