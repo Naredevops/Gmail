@@ -15,9 +15,6 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
-
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
@@ -25,16 +22,11 @@ jobs:
           pip install --upgrade pip
 
       - name: Install dependencies from requirements.txt
-        run: |
-          cd ${{ github.workspace }}
-          
-          pip install -r requirements.txt
+        working-directory: ${{ github.workspace }}
+        run: pip install -r requirements.txt
 
       - name: List directory contents
         run: ls -l
-      - name: Print directory contents
-        run: ls -l
-
 
       - name: Send Email
         env:
