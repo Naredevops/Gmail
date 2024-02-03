@@ -22,7 +22,7 @@ jobs:
           pip install --upgrade pip
 
       - name: Install dependencies
-        working-directory: my_project
+        working-directory: https://github.com/Naredevops/Gmail/edit/main/requirements.txt
         run: pip install -r requirements.txt
 
       - name: Send Email
