@@ -27,6 +27,10 @@ jobs:
           # source /path/to/your/virtual/environment/bin/activate
           # C:\Program Files\Python311
           source C:\Program Files\Python311
+          - name: Print directory contents
+            run: ls -l
+
+          
           
 
       # Run your script with activated environment
