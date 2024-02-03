@@ -26,7 +26,7 @@ jobs:
         run: |
           # source /path/to/your/virtual/environment/bin/activate
           # C:\Program Files\Python311
-          source C:\Program Files\Python311\bin\activate
+          source C:\Program Files\Python311
           
 
       # Run your script with activated environment
