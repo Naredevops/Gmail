@@ -24,6 +24,13 @@ jobs:
       - name: Install dependencies
         working-directory: https://github.com/Naredevops/Gmail/edit/main/requirements.txt
         run: pip install -r requirements.txt
+        - name: Install dependencies
+  working-directory: ${{ github.workspace }}
+  run: pip install -r requirements.txt
+  - name: List directory contents
+  run: ls -l
+
+
 
       - name: Send Email
         env:
