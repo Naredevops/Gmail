@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies from requirements.txt
         run: |
           cd ${{ github.workspace }}
-          PATh ${{Gmail/requirements.txt}}
+          
           pip install -r requirements.txt
 
       - name: List directory contents
