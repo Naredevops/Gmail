@@ -28,6 +28,9 @@ jobs:
 
       - name: List directory contents
         run: ls -l
+      - name: Print directory contents
+        run: ls -l
+
 
       - name: Send Email
         env:
