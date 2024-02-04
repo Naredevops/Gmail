@@ -18,7 +18,8 @@ jobs:
       # Activate the virtual environment
       - name: Activate virtual environment
         run: |
-          source "$(awk -F= '/^home/ {print $2}' C:\Program Files\Python311 | tr -d ' ')/Scripts/activate"  # Adjust the path for Windows
+         # source "$(awk -F= '/^home/ {print $2}' C:\Program Files\Python311 | tr -d ' ')/Scripts/activate"  # Adjust the path for Windows
+source "$(awk -F= '/^home/ {print $2}' 'C:\Program Files\Python311\pyvenv.cfg' | tr -d ' ')/Scripts/activate"
 
       # Install dependencies from requirements.txt
       - name: Install dependencies
