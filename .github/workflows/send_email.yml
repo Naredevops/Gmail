@@ -15,18 +15,16 @@ jobs:
         with:
           python-version: '3.x'
 
+      # Activate the virtual environment
+      - name: Activate virtual environment
+        run: |
+          source $(awk -F= '/^home/ {print $2}' C:\Program Files\Python311/pyvenv.cfg)/bin/activate
+
       # Install dependencies from requirements.txt
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python Naredevops/Gmail/requirements.txt -m pip install -r requirements.txt
-          
-      # Activate the virtual environment (if applicable)
-      # No virtual environment needed for this case, directly use Python interpreter
-      - name: Activate virtual environment
-        run: |
-          # Use the Python interpreter directly to install dependencies
-          python Naredevops/Gmail/requirements.txt -m pip install -r requirements.txt
+          python -m pip install -r path/to/your/requirements.txt
 
       # Print directory contents (for debugging)
       - name: Print directory contents
