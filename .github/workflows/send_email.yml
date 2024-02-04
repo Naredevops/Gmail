@@ -24,7 +24,7 @@ jobs:
       - name: Activate virtual environment and install dependencies
         run: |
           # source "$(awk -F= '/^home/ {print $2}' 'C:\Program Files\Python311\pyvenv.cfg' | tr -d ' ')/Scripts/activate"
-          source "$(awk -F= '/^home/ {print $2}' 'C:\\Program Files\\Python311\\pyvenv.cfg' | tr -d ' ')/Scripts/activate"
+         # source "$(awk -F= '/^home/ {print $2}' 'C:\\Program Files\\Python311\\pyvenv.cfg' | tr -d ' ')/Scripts/activate"
 
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
