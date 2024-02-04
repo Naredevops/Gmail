@@ -16,9 +16,19 @@ jobs:
           python-version: '3.x'
 
       # Activate the virtual environment
-      - name: Activate virtual environment
+      # - name: Activate virtual environment
+      #   run: |
+      #     source "$(awk -F= '/^home/ {print $2}' 'C:\Program Files\Python311\pyvenv.cfg' | tr -d ' ')/Scripts/activate"
+
+      #     # Activate the virtual environment and install dependencies from requirements.txt
+      - name: Activate virtual environment and install dependencies
         run: |
-          source "$(awk -F= '/^home/ {print $2}' 'C:\Program Files\Python311\pyvenv.cfg' | tr -d ' ')/Scripts/activate"
+          # source "$(awk -F= '/^home/ {print $2}' 'C:\Program Files\Python311\pyvenv.cfg' | tr -d ' ')/Scripts/activate"
+          source "$(awk -F= '/^home/ {print $2}' 'C:\\Program Files\\Python311\\pyvenv.cfg' | tr -d ' ')/Scripts/activate"
+
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
 
       # Install dependencies from requirements.txt
       - name: Install dependencies
