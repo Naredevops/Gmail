@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python /Naredevops/Gmail -m pip install -r requirements.txt
+          python Naredevops/Gmail -m pip install -r requirements.txt
           
          # C:\Program Files\Python311\python.exe -m pip install -r requirements.txt
 
@@ -28,7 +28,7 @@ jobs:
       - name: Activate virtual environment
         run: |
           # Use the Python interpreter directly to install dependencies
-          "/Naredevops/Gmail" -m pip install -r requirements.txt
+          python Naredevops/Gmail -m pip install -r requirements.txt
 
       # Print directory contents (for debugging)
       - name: Print directory contents
