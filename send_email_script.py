@@ -7,14 +7,14 @@ SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 587
 
 # Gmail credentials
-GMAIL_USER = input("Enter your Gmail address: ")
-GMAIL_PASSWORD = input("Enter your Gmail password: ")
+GMAIL_USER = input("narender5t9.devops@gmail.com: ")
+GMAIL_PASSWORD = input("bbhb canf dpcd creb: ")
 
 # Email details
 sender_email = GMAIL_USER
-receiver_email = input("Enter recipient's email address: ")
-subject = input("Enter email subject: ")
-message_body = input("Enter email message body: ")
+receiver_email = input("narender735fe@gmail.com: ")
+subject = input("Devops Architect: ")
+message_body = input("Hi, Please find the list of documents i am sending: ")
 
 # Create message
 msg = MIMEMultipart()
